@@ -46,6 +46,8 @@ iptables -A INPUT -p tcp --dport 22 -j ACCEPT
 iptables -A OUTPUT -p tcp --sport 22 -j ACCEPT
 iptables -A OUTPUT -p tcp --sport 2342 -j ACCEPT
 iptables -A OUTPUT -p tcp --sport 62144 -j ACCEPT
+iptables -A OUTPUT -p udp --sport 2342 -j ACCEPT
+iptables -A OUTPUT -p udp --sport 62144 -j ACCEPT
 
 # Allow loopback interface (localhost)
 iptables -A INPUT -i lo -j ACCEPT
